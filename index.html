@@ -122,148 +122,62 @@
     <script>
         // Datos de correos electrónicos
         const emailData = [
-            // PDF 1 - Comunicaciones Corporativas
-            {
-                title: "PDF 1 - Comunicaciones Corporativas",
-                emails: [
-                    {from: "director@empresa.com", subject: "Reunión de directorio mensual", message: "Estimados miembros del directorio, les recuerdo que tenemos programada la reunión mensual para el próximo viernes a las 10:00 AM. Agenda adjunta."},
-                    {from: "rrhh@corporacion.net", subject: "Nuevas políticas de trabajo remoto", message: "Queridos colaboradores, informamos sobre las nuevas políticas de trabajo remoto que entrarán en vigencia el próximo mes. Favor revisar el documento adjunto."},
-                    {from: "marketing@innovatech.com", subject: "Lanzamiento de campaña Q2", message: "Equipo de marketing, iniciamos la campaña del segundo trimestre. Necesitamos coordinar todas las actividades para la próxima semana."},
-                    {from: "ventas@globalcorp.org", subject: "Objetivos de ventas actualizados", message: "Estimado equipo comercial, hemos actualizado los objetivos de ventas para este trimestre. Favor revisar los nuevos KPIs en el sistema."},
-                    {from: "finanzas@megaempresa.com", subject: "Cierre contable mensual", message: "Departamento de contabilidad, recordamos que el cierre contable debe estar completado antes del día 5 de cada mes."},
-                    {from: "sistemas@techsolutions.net", subject: "Mantenimiento programado del servidor", message: "Usuarios del sistema, informamos que habrá un mantenimiento programado el sábado de 2:00 AM a 6:00 AM. El sistema estará fuera de servicio."},
-                    {from: "calidad@manufactura.com", subject: "Auditoría de calidad semanal", message: "Supervisores de producción, la auditoría de calidad se realizará el jueves. Favor preparar la documentación requerida."},
-                    {from: "logistica@distribuidora.org", subject: "Optimización de rutas de entrega", message: "Equipo de logística, hemos implementado un nuevo sistema de optimización de rutas. Capacitación programada para el lunes."},
-                    {from: "comunicaciones@holding.net", subject: "Boletín interno semanal", message: "Colaboradores, el boletín interno de esta semana incluye actualizaciones importantes sobre beneficios y eventos corporativos."},
-                    {from: "desarrollo@software.com", subject: "Nueva versión del sistema", message: "Equipo de desarrollo, la versión 2.5 del sistema principal está lista para testing. Favor iniciar pruebas de calidad."},
-                    {from: "legal@bufete.net", subject: "Actualización normativa", message: "Departamentos involucrados, informamos sobre cambios en la normativa legal que afectan nuestras operaciones. Reunión informativa el martes."},
-                    {from: "compras@adquisiciones.com", subject: "Proceso de licitación abierto", message: "Proveedores registrados, iniciamos el proceso de licitación para equipos de oficina. Plazo de presentación: 15 días hábiles."},
-                    {from: "seguridad@proteccion.org", subject: "Simulacro de evacuación", message: "Todos los empleados, realizaremos un simulacro de evacuación el próximo miércoles a las 3:00 PM. Participación obligatoria."},
-                    {from: "capacitacion@instituto.net", subject: "Programa de formación continua", message: "Interesados en capacitación, abrimos inscripciones para el programa de formación continua. Cupos limitados."},
-                    {from: "proyectos@consultora.com", subject: "Avance del proyecto Alpha", message: "Stakeholders del proyecto, el avance del proyecto Alpha va según cronograma. Próxima reunión de seguimiento el viernes."},
-                    {from: "innovacion@startup.org", subject: "Hackathon interno", message: "Desarrolladores y creativos, organizamos un hackathon interno para generar ideas innovadoras. Premios atractivos para los ganadores."},
-                    {from: "administracion@oficinas.net", subject: "Horarios de atención actualizado", message: "Visitantes y empleados, informamos sobre los nuevos horarios de atención al público. Vigente desde el próximo lunes."},
-                    {from: "produccion@fabrica.com", subject: "Incremento en la producción", message: "Operarios de planta, debido al aumento en la demanda, incrementaremos la producción en un 20%. Turnos adicionales disponibles."},
-                    {from: "exportaciones@comercio.org", subject: "Nuevos mercados internacionales", message: "Equipo comercial internacional, hemos identificado oportunidades en tres nuevos mercados. Estudios de factibilidad en curso."},
-                    {from: "medioambiente@sustentable.net", subject: "Programa de sostenibilidad", message: "Todos los departamentos, implementamos un programa de sostenibilidad ambiental. Cada área debe designar un responsable."},
-                    {from: "contratos@juridico.com", subject: "Renovación de contratos", message: "Gerencias de área, iniciamos el proceso de renovación de contratos de servicios. Favor revisar vencimientos próximos."},
-                    {from: "investigacion@desarrollo.org", subject: "Nuevos prototipos", message: "Equipo de I+D, los nuevos prototipos están listos para las pruebas de campo. Cronograma de testing adjunto."}
-                ]
-            },
-            // PDF 2 - Comunicaciones Académicas
-            {
-                title: "PDF 2 - Comunicaciones Académicas",
-                emails: [
-                    {from: "decano@universidad.edu", subject: "Inicio del nuevo semestre académico", message: "Estimada comunidad universitaria, damos la bienvenida al nuevo semestre académico. Calendario de actividades disponible en el portal estudiantil."},
-                    {from: "registro@instituto.edu", subject: "Proceso de matrícula abierto", message: "Estudiantes, el proceso de matrícula para el próximo período está abierto. Plazo límite: 30 de este mes."},
-                    {from: "biblioteca@academia.edu", subject: "Nuevas adquisiciones bibliográficas", message: "Comunidad académica, informamos sobre las nuevas adquisiciones bibliográficas. Catálogo actualizado disponible en línea."},
-                    {from: "investigacion@ciencias.edu", subject: "Convocatoria de becas de investigación", message: "Estudiantes de posgrado, abrimos convocatoria para becas de investigación. Requisitos y formularios en la página web."},
-                    {from: "extension@cultural.edu", subject: "Actividades de extensión universitaria", message: "Comunidad en general, presentamos el programa de actividades de extensión universitaria para este trimestre."},
-                    {from: "laboratorio@quimica.edu", subject: "Normas de seguridad actualizadas", message: "Usuarios del laboratorio, hemos actualizado las normas de seguridad. Capacitación obligatoria antes del acceso."},
-                    {from: "coordinacion@posgrado.edu", subject: "Defensa de tesis programadas", message: "Estudiantes de maestría y doctorado, cronograma de defensas de tesis para este mes. Confirmar asistencia."},
-                    {from: "deportes@recreacion.edu", subject: "Torneos interuniversitarios", message: "Estudiantes deportistas, iniciamos las inscripciones para los torneos interuniversitarios. Múltiples disciplinas disponibles."},
-                    {from: "intercambio@internacional.edu", subject: "Programas de intercambio estudiantil", message: "Estudiantes interesados, abrimos convocatoria para programas de intercambio internacional. Destinos en 15 países."},
-                    {from: "pastoral@bienestar.edu", subject: "Apoyo psicológico estudiantil", message: "Estudiantes, recordamos que el servicio de apoyo psicológico está disponible. Citas con previa reserva."},
-                    {from: "graduados@egresados.edu", subject: "Red de egresados", message: "Estimados graduados, los invitamos a participar en la red de egresados. Oportunidades de networking y desarrollo profesional."},
-                    {from: "tecnologia@sistemas.edu", subject: "Actualización de plataforma educativa", message: "Usuarios de la plataforma, realizaremos actualizaciones el fin de semana. Nuevas funcionalidades disponibles."},
-                    {from: "admisiones@ingreso.edu", subject: "Proceso de admisión 2025", message: "Aspirantes a ingresar, iniciamos el proceso de admisión para el año 2025. Exámenes de ingreso programados."},
-                    {from: "calidad@acreditacion.edu", subject: "Proceso de autoevaluación", message: "Docentes y administrativos, iniciamos el proceso de autoevaluación institucional. Participación de toda la comunidad."},
-                    {from: "proyeccion@social.edu", subject: "Proyectos de responsabilidad social", message: "Estudiantes de servicio social, presentamos los proyectos de responsabilidad social disponibles para este período."},
-                    {from: "editorial@publicaciones.edu", subject: "Convocatoria revista académica", message: "Investigadores, abrimos convocatoria para la próxima edición de nuestra revista académica. Fecha límite de envío: 15 de abril."},
-                    {from: "idiomas@lenguas.edu", subject: "Cursos de idiomas gratuitos", message: "Comunidad universitaria, ofrecemos cursos gratuitos de idiomas extranjeros. Inscripciones abiertas por tiempo limitado."},
-                    {from: "practicas@empresariales.edu", subject: "Convenios de prácticas profesionales", message: "Estudiantes de últimos semestres, nuevos convenios de prácticas profesionales disponibles. Oportunidades en empresas líderes."},
-                    {from: "ceremonia@graduacion.edu", subject: "Ceremonia de graduación", message: "Graduandos y familias, detalles sobre la ceremonia de graduación. Protocolo y requisitos para participar."},
-                    {from: "innovation@emprendimiento.edu", subject: "Incubadora de startups", message: "Estudiantes emprendedores, abrimos convocatoria para la incubadora de startups universitaria. Mentorías y financiamiento disponible."},
-                    {from: "salud@medico.edu", subject: "Campaña de vacunación gratuita", message: "Comunidad universitaria, realizamos campaña de vacunación gratuita en el campus. Cronograma por facultades."},
-                    {from: "sostenibilidad@verde.edu", subject: "Campus verde", message: "Todos los miembros de la comunidad, implementamos el programa Campus Verde. Participación voluntaria en actividades ambientales."}
-                ]
-            },
-            // PDF 3 - Comunicaciones de Servicios
-            {
-                title: "PDF 3 - Comunicaciones de Servicios",
-                emails: [
-                    {from: "atencion@bancoseguro.com", subject: "Actualización de datos personales", message: "Estimado cliente, le recordamos la importancia de mantener actualizados sus datos personales en nuestro sistema. Puede hacerlo a través de la banca en línea."},
-                    {from: "soporte@telefonica.net", subject: "Mejoras en la red de telecomunicaciones", message: "Apreciado usuario, informamos sobre las mejoras que estamos realizando en nuestra red. Mejor cobertura y velocidad en su zona."},
-                    {from: "facturacion@energia.com", subject: "Factura electrónica disponible", message: "Estimado cliente, su factura del mes de marzo ya está disponible en su portal en línea. Fecha de vencimiento: 25 de abril."},
-                    {from: "seguros@proteccion.org", subject: "Renovación de póliza de seguro", message: "Estimado asegurado, su póliza vence el próximo mes. Le enviamos cotización para la renovación con beneficios adicionales."},
-                    {from: "delivery@restaurante.com", subject: "Nuevos platos en el menú", message: "Querido cliente, hemos añadido nuevos platos a nuestro menú de delivery. Especialidades internacionales con descuentos de lanzamiento."},
-                    {from: "mantenimiento@condominio.net", subject: "Mantenimiento de áreas comunes", message: "Estimados propietarios, realizaremos mantenimiento de las áreas comunes este sábado. Acceso restringido de 8:00 AM a 2:00 PM."},
-                    {from: "promociones@supermercado.com", subject: "Ofertas especiales del fin de semana", message: "Estimado cliente, no se pierda nuestras ofertas especiales del fin de semana. Descuentos de hasta 50% en productos seleccionados."},
-                    {from: "citas@clinica.med", subject: "Recordatorio de cita médica", message: "Estimado paciente, le recordamos su cita médica programada para mañana a las 3:00 PM. Favor llegar 15 minutos antes."},
-                    {from: "gimnasio@fitness.com", subject: "Nuevas clases grupales", message: "Estimado socio, hemos añadido nuevas clases grupales a nuestro horario. Yoga, pilates y spinning con instructores certificados."},
-                    {from: "garage@reparacion.net", subject: "Vehículo listo para retiro", message: "Estimado cliente, su vehículo está listo para retiro. Reparación completada satisfactoriamente. Horario de atención hasta las 6:00 PM."},
-                    {from: "estetica@belleza.com", subject: "Tratamientos de temporada", message: "Estimada clienta, ofrecemos tratamientos especiales de temporada. Agenda tu cita y obtén descuentos exclusivos."},
-                    {from: "lavanderia@limpieza.net", subject: "Servicio de recolección a domicilio", message: "Estimado cliente, ahora ofrecemos servicio de recolección y entrega a domicilio. Programar su recolección es muy fácil."},
-                    {from: "veterinaria@mascotas.com", subject: "Campaña de vacunación", message: "Estimado dueño de mascota, iniciamos nuestra campaña anual de vacunación. Protege a tu mascota con nuestros planes preventivos."},
-                    {from: "jardineria@paisajismo.org", subject: "Mantenimiento de jardines", message: "Estimado cliente, es tiempo del mantenimiento estacional de su jardín. Incluye poda, fertilización y control de plagas."},
-                    {from: "mudanzas@transporte.com", subject: "Cotización de mudanza", message: "Estimado cliente, enviamos la cotización solicitada para su mudanza. Incluye embalaje, transporte y seguro de mercancías."},
-                    {from: "agua@servicios.gov", subject: "Corte programado del servicio", message: "Estimado usuario, informamos sobre el corte programado del servicio de agua el próximo martes de 9:00 AM a 3:00 PM."},
-                    {from: "internet@proveedor.net", subject: "Upgrade gratuito de velocidad", message: "Estimado cliente, hemos aumentado la velocidad de su plan de internet sin costo adicional. Disfrute de mayor velocidad de navegación."},
-                    {from: "taxi@transporte.app", subject: "Nueva función de programación", message: "Estimado usuario, ahora puede programar sus viajes con anticipación. Mayor comodidad y tarifas preferenciales."},
-                    {from: "hotel@hospedaje.com", subject: "Reserva confirmada", message: "Estimado huésped, confirmamos su reserva para las fechas solicitadas. Código de reserva adjunto. Esperamos su visita."},
-                    {from: "fotografia@eventos.com", subject: "Sesión fotográfica programada", message: "Estimado cliente, confirmamos su sesión fotográfica para el próximo sábado. Recomendaciones de vestuario adjuntas."},
-                    {from: "contabilidad@servicios.net", subject: "Declaración de impuestos", message: "Estimado contribuyente, recordamos que se acerca la fecha límite para la declaración de impuestos. Ofrecemos asesoría especializada."},
-                    {from: "streaming@entretenimiento.com", subject: "Nuevos contenidos disponibles", message: "Estimado suscriptor, hemos añadido nuevos contenidos exclusivos a nuestra plataforma. Series, películas y documentales imperdibles."}
-                ]
-            },
-            // PDF 4 - Comunicaciones Comunitarias
-            {
-                title: "PDF 4 - Comunicaciones Comunitarias",
-                emails: [
-                    {from: "presidencia@juntavecinal.org", subject: "Asamblea general de vecinos", message: "Estimados vecinos, convocamos a la asamblea general mensual este domingo a las 10:00 AM en el salón comunal. Orden del día adjunto."},
-                    {from: "secretaria@municipio.gov", subject: "Obras de mejoramiento vial", message: "Estimados ciudadanos, iniciamos obras de mejoramiento vial en el sector. Desvíos temporales durante las próximas dos semanas."},
-                    {from: "cultura@comunidad.org", subject: "Festival cultural del barrio", message: "Querida comunidad, organizamos el festival cultural anual del barrio. Invitamos a participar con presentaciones artísticas y gastronómicas."},
-                    {from: "seguridad@ciudadana.gov", subject: "Rondas de seguridad nocturna", message: "Estimados residentes, implementamos rondas de seguridad nocturna en coordinación con la policía local. Horarios de patrullaje adjuntos."},
-                    {from: "medioambiente@ecologico.org", subject: "Jornada de limpieza comunitaria", message: "Vecinos comprometidos, organizamos jornada de limpieza comunitaria este sábado. Punto de encuentro: parque central a las 8:00 AM."},
-                    {from: "deportes@liga.local", subject: "Torneo de fútbol barrial", message: "Equipos participantes, iniciamos el torneo de fútbol barrial. Fixture completo y reglamento disponible en la página web."},
-                    {from: "biblioteca@popular.org", subject: "Talleres de lectura para niños", message: "Padres de familia, ofrecemos talleres gratuitos de lectura para niños. Desarrollo de habilidades lectoras y amor por los libros."},
-                    {from: "salud@centromedico.com", subject: "Campaña de salud preventiva", message: "Estimados vecinos, realizamos campaña de salud preventiva gratuita. Controles médicos básicos y charlas educativas."},
-                    {from: "adultomayor@bienestar.org", subject: "Actividades para adultos mayores", message: "Estimados adultos mayores, presentamos el programa de actividades recreativas y de bienestar para este trimestre."},
-                    {from: "juventud@desarrollo.org", subject: "Programa de liderazgo juvenil", message: "Jóvenes de la comunidad, abrimos inscripciones para el programa de liderazgo juvenil. Desarrollo de habilidades y proyectos sociales."},
-                    {from: "emergencias@proteccion.gov", subject: "Plan de emergencias comunitario", message: "Estimados vecinos, implementamos el plan de emergencias comunitario. Capacitación en primeros auxilios y evacuación."},
-                    {from: "cooperativa@ahorro.org", subject: "Reunión de socios", message: "Estimados socios, convocamos a la reunión mensual de la cooperativa. Presentación de estados financieros y nuevos proyectos."},
-                    {from: "educacion@escuela.edu", subject: "Reunión de padres de familia", message: "Estimados padres, los convocamos a la reunión trimestral para evaluar el progreso académico de sus hijos. Participación importante."},
-                    {from: "transporte@publico.gov", subject: "Nuevas rutas de transporte", message: "Estimados usuarios, informamos sobre nuevas rutas de transporte público que beneficiarán a nuestra comunidad."},
-                    {from: "comercio@mercado.local", subject: "Feria de productos locales", message: "Estimados productores y consumidores, organizamos feria de productos locales. Apoyo a la economía comunitaria."},
-                    {from: "turismo@promocion.org", subject: "Ruta turística comunitaria", message: "Estimados vecinos, desarrollamos ruta turística comunitaria. Oportunidad de generar ingresos mostrando nuestros atractivos."},
-                    {from: "tecnologia@inclusion.org", subject: "Talleres de computación gratuitos", message: "Comunidad en general, ofrecemos talleres gratuitos de computación básica. Inclusión digital para todas las edades."},
-                    {from: "arte@creatividad.org", subject: "Concurso de arte urbano", message: "Artistas locales, convocamos al concurso anual de arte urbano. Premios en efectivo y reconocimiento a la creatividad."},
-                    {from: "radio@comunitaria.org", subject: "Programa radial comunitario", message: "Estimados oyentes, lanzamos programa radial comunitario. Espacio para noticias locales y participación ciudadana."},
-                    {from: "huerta@organica.org", subject: "Proyecto de huerta comunitaria", message: "Vecinos interesados, iniciamos proyecto de huerta comunitaria orgánica. Aprendizaje y alimentación saludable."},
-                    {from: "memoria@historica.org", subject: "Rescate de memoria histórica", message: "Estimados vecinos, proyecto de rescate de memoria histórica del barrio. Recopilación de testimonios y fotografías."},
-                    {from: "inclusion@diversidad.org", subject: "Programa de inclusión social", message: "Estimada comunidad, implementamos programa de inclusión social para personas con discapacidad. Participación de todos."}
-                ]
-            },
-            // PDF 5 - Comunicaciones Personales
-            {
-                title: "PDF 5 - Comunicaciones Personales",
-                emails: [
-                    {from: "maria.gonzalez@email.com", subject: "Invitación a mi cumpleaños", message: "Queridos amigos, los invito a celebrar mi cumpleaños este sábado en mi casa. Fiesta desde las 7:00 PM. ¡Espero verlos a todos!"},
-                    {from: "juan.martinez@correo.net", subject: "Viaje de fin de semana", message: "Hola familia, planeo un viaje de fin de semana a la playa. ¿Quién se anima a acompañarme? Sería genial pasar tiempo juntos."},
-                    {from: "ana.rodriguez@mail.org", subject: "Receta de la abuela", message: "Querida prima, te envío la receta de las empanadas de la abuela que tanto te gustaron. Ingredientes y preparación paso a paso."},
-                    {from: "carlos.lopez@mensaje.com", subject: "Reunión de ex compañeros", message: "Estimados ex compañeros de colegio, organizamos una reunión para recordar viejos tiempos. Será en el restaurante de siempre."},
-                    {from: "laura.silva@personal.net", subject: "Felicitaciones por tu logro", message: "Querida amiga, quería felicitarte por tu nuevo empleo. Te lo mereces completamente. Celebremos pronto tu éxito."},
-                    {from: "diego.morales@contacto.com", subject: "Préstamo de herramientas", message: "Hola vecino, necesito pedirte prestado el taladro para un proyecto casero. Te lo devuelvo en perfectas condiciones mañana."},
-                    {from: "sofia.castro@amigos.org", subject: "Clases de baile", message: "Amigas, encontré un lugar genial para clases de baile los jueves. ¿Se animan a acompañarme? Será muy divertido."},
-                    {from: "roberto.vargas@familia.net", subject: "Almuerzo dominical", message: "Querida familia, los invito al almuerzo dominical en casa. Prepararé el asado especial que tanto les gusta a todos."},
-                    {from: "patricia.herrera@social.com", subject: "Grupo de lectura", message: "Hola lectoras, propongo formar un grupo de lectura mensual. Podemos reunirnos en casa de cada una alternadamente."},
-                    {from: "alejandro.ruiz@hobbie.org", subject: "Torneo de ajedrez", message: "Estimados amigos ajedrecistas, organizamos torneo informal este fin de semana. Premios simbólicos y mucha diversión garantizada."},
-                    {from: "gabriela.torres@cocina.net", subject: "Intercambio de recetas", message: "Queridas amigas cocineras, propongo intercambiar nuestras recetas favoritas. Podemos hacer un recetario grupal."},
-                    {from: "fernando.jimenez@deporte.com", subject: "Partido de fútbol", message: "Amigos futboleros, organizamos partido este domingo en la cancha de siempre. Confirmem participación para armar equipos."},
-                    {from: "valeria.mendoza@arte.org", subject: "Exposición de arte local", message: "Queridos amigos del arte, los invito a la exposición de arte local en la galería del centro. Obras de artistas emergentes muy talentosos."},
-                    {from: "ricardo.delgado@viaje.net", subject: "Fotos del viaje", message: "Hola compañeros de viaje, ya subí todas las fotos de nuestro viaje a la carpeta compartida. ¡Qué recuerdos tan hermosos creamos juntos!"},
-                    {from: "monica.guerrero@jardin.com", subject: "Consejos de jardinería", message: "Querida vecina, te envío los consejos de jardinería que me pediste. Mis plantas favoritas y cómo cuidarlas durante esta temporada."},
-                    {from: "andres.paredes@musica.org", subject: "Banda amateur", message: "Músicos aficionados, estoy formando una banda amateur para tocar los fines de semana. Buscamos guitarrista y baterista principalmente."},
-                    {from: "carolina.vega@mascotas.net", subject: "Cuidado de mascotas", message: "Hola vecinos, viajo por trabajo y necesito alguien que cuide a mi gato por una semana. Pago por el servicio, por supuesto."},
-                    {from: "luis.ramirez@fotografia.com", subject: "Sesión de fotos familiares", message: "Querida familia, propongo hacer una sesión de fotos familiares profesional. Podemos contratar un fotógrafo y hacer un álbum hermoso."},
-                    {from: "beatriz.santos@libro.org", subject: "Recomendación de libros", message: "Estimada amiga lectora, te recomiendo este libro que acabo de terminar. Estoy segura de que te va a encantar tanto como a mí."},
-                    {from: "oscar.medina@ejercicio.net", subject: "Rutina de ejercicios", message: "Hola compañero de gimnasio, te envío la rutina de ejercicios que me pediste. Incluye ejercicios para todos los grupos musculares."},
-                    {from: "elena.navarro@reunion.com", subject: "Reunión de amigas", message: "Queridas amigas, hace tiempo que no nos juntamos todas. Propongo una reunión este viernes en mi casa para ponernos al día."},
-                    {from: "hugo.ortiz@negocio.org", subject: "Propuesta de negocio", message: "Estimado socio potencial, tengo una propuesta de negocio interesante que podría beneficiarnos mutuamente. ¿Podemos conversar esta semana?"},
-                    {from: "cristina.flores@voluntariado.net", subject: "Actividad de voluntariado", message: "Amigos solidarios, organizamos actividad de voluntariado en el hogar de ancianos. Su compañía y alegría significan mucho para ellos."}
-                ]
-            }
-        ];
+    // PDF 1 - Business Communications
+    {
+        title: "PDF 1 - Business Communications",
+        emails: [
+            {from: "ceo@startup.io", subject: "Quarterly All-Hands Meeting", message: "Team, our Q2 all-hands meeting is scheduled for June 20th. Prepare your department updates and join us in the main auditorium."},
+            {from: "devops@techcorp.com", subject: "Scheduled System Maintenance", message: "Engineering team, we'll perform critical system upgrades this weekend. All services will be offline from 2-5 AM Saturday."},
+            {from: "hr@careers.net", subject: "New Benefits Package", message: "Employees, we're excited to announce enhanced health benefits starting next month. Enrollment opens Monday in your portal."},
+            {from: "sales@revenue.io", subject: "New CRM Launch", message: "Sales team, the new CRM platform goes live Tuesday. Mandatory training sessions available all week."},
+            {from: "legal@compliance.org", subject: "Policy Updates", message: "All staff, please review the updated data privacy policies by month-end. Certification required."}
+        ]
+    },
+    // PDF 2 - Educational Updates
+    {
+        title: "PDF 2 - Educational Updates",
+        emails: [
+            {from: "registrar@university.edu", subject: "Fall Semester Registration", message: "Students, course registration for Fall 2024 opens next Monday. Advising appointments are now available."},
+            {from: "library@research.edu", subject: "New Database Access", message: "Faculty and students, we've subscribed to three new academic databases. Access them through the library portal."},
+            {from: "housing@campus.edu", subject: "Dormitory Assignments", message: "Incoming students, housing assignments will be released July 1st. Update your preferences by June 25th."},
+            {from: "careers@alumni.edu", subject: "Job Fair Invitation", message: "Seniors, the annual career fair features 50+ employers. Upload your resume to the portal by Friday."},
+            {from: "bursar@finances.edu", subject: "Tuition Payment Plans", message: "Families, fall tuition payment options are now available. Deadline for enrollment is August 15th."}
+        ]
+    },
+    // PDF 3 - Service Notifications
+    {
+        title: "PDF 3 - Service Notifications",
+        emails: [
+            {from: "support@isp.net", subject: "Network Upgrade Complete", message: "Customers, we've doubled your internet speeds at no extra cost. Enjoy faster browsing and streaming!"},
+            {from: "billing@utility.com", subject: "Paperless Billing Bonus", message: "Account holders, switch to paperless statements this month and receive a $10 credit on your next bill."},
+            {from: "delivery@food.app", subject: "New Restaurant Partners", message: "Food lovers, we've added 12 new restaurants to our delivery service. Try them with 20% off your first order."},
+            {from: "service@auto.shop", subject: "Vehicle Recall Notice", message: "Owners of Model X 2022, please schedule recall repairs for the emissions system at your earliest convenience."},
+            {from: "notifications@bank.com", subject: "Suspicious Activity Alert", message: "We detected unusual login attempts. Please verify your recent transactions and update your password."}
+        ]
+    },
+    // PDF 4 - Community Announcements
+    {
+        title: "PDF 4 - Community Announcements",
+        emails: [
+            {from: "mayor@town.gov", subject: "Road Construction Update", message: "Residents, Main Street repaving begins Monday. Expect alternate routes and temporary parking restrictions."},
+            {from: "events@community.org", subject: "Summer Festival Volunteers", message: "Neighbors, we need 50 volunteers for the annual summer fest. Sign up for shifts at the community center."},
+            {from: "safety@neighborhood.net", subject: "Neighborhood Watch Meeting", message: "Concerned citizens, our next watch meeting will address recent security concerns. Tuesday at 7 PM."},
+            {from: "recreation@parks.gov", subject: "Pool Opening Schedule", message: "Families, all municipal pools open Memorial Day weekend. Season passes now on sale."},
+            {from: "recycling@green.org", subject: "E-Waste Collection Day", message: "Households, dispose of electronics responsibly at our collection event June 5th in the high school parking lot."}
+        ]
+    },
+    // PDF 5 - Personal Correspondence
+    {
+        title: "PDF 5 - Personal Correspondence",
+        emails: [
+            {from: "mom@family.net", subject: "Family Reunion Plans", message: "Kids, let's finalize dates for the summer reunion. Grandma wants everyone there for her 80th birthday!"},
+            {from: "bestfriend@personal.com", subject: "Weekend Getaway Idea", message: "Hey! Found a cozy cabin available next month. What do you think about a girls' weekend in the mountains?"},
+            {from: "cousin@relative.org", subject: "Recipe Exchange", message: "Remember those cookies you loved? I finally got Aunt Carol's secret recipe - attached!"},
+            {from: "roommate@home.net", subject: "Apartment Maintenance", message: "The landlord is coming Saturday to fix the AC. Can you be home between 9-12?"},
+            {from: "teammate@sports.club", subject: "Tournament Registration", message: "Our softball team needs to confirm participation by Friday. Who's in for the July tournament?"}
+        ]
+    }
+];
 
         // Función para generar PDF individual
         function generatePDF(pdfData, index) {
